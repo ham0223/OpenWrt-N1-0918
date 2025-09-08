@@ -66,9 +66,6 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-          sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d /usr/local/lib/android 2>/dev/null
-          sudo swapoff -a
-          sudo rm -f /swapfile /mnt/swapfile
           sudo -E apt-get -y update
           sudo -E apt-get -y purge azure-cli ghc* zulu* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
           sudo -E apt-get -y install $(curl -fsSL https://raw.githubusercontent.com/ham0223/OpenWrt-N1-0918/refs/heads/main/N1/Immortalwrt/2410)
