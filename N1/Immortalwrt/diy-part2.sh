@@ -15,8 +15,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
 
 
 # 删除及其拉取源码
-git clone https://github.com/xiaorouji/openwrt-passwall --depth=1 package/passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 --depth=1 package/passwall2
+#git clone https://github.com/xiaorouji/openwrt-passwall --depth=1 package/passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall2 --depth=1 package/passwall2
 git clone https://github.com/ophub/luci-app-amlogic --depth=1 package/amlogic
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
