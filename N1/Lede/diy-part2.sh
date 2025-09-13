@@ -22,7 +22,12 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwal
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 科学插件的依赖-备用
-#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+# 科学插件：移除 openwrt feeds 自带的核心包
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+# 更新 golang 1.25 版本
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 
 # 临时修复acpid,aliyundrive-webdav,xfsprogs,perl-html-parser,v2dat 导致的编译失败问题
